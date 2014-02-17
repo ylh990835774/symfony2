@@ -1,0 +1,3 @@
+site_home_homepage:
+    pattern:  /
+    defaults: { _controller: SiteHomeBundle:Default:index }

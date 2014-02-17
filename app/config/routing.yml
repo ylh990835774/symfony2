@@ -1,0 +1,8 @@
+blog:
+    resource: "@SiteBlogBundle/Controller"
+    type:     annotation
+
+site_home:
+    resource: "@SiteHomeBundle/Resources/config/routing.yml"
+    prefix:   /
+

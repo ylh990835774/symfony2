@@ -1,0 +1,30 @@
+{% extends "::base.html.twig" %}
+{% block body %}
+	{% include 'SiteBlogBundle:Public:navigate.html.twig' %}<!-- /.navbar -->
+    <div class="container">
+      {% block main %}{% endblock %}
+      <hr>
+      {% include 'SiteBlogBundle:Public:footer.html.twig' %}
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+	{% stylesheets 
+		'@SiteBlogBundle/Resources/public/css/main.css'
+		output="css/compiled/bulid.css"
+	%}
+	    <link rel="stylesheet" href="{{ asset_url }}" />
+	{% endstylesheets %}
+{% endblock %}
+
+{% block javascripts %}
+	{% javascripts 
+		'@SiteBlogBundle/Resources/public/bower_components/jquery/jquery.min.js'
+		'@SiteBlogBundle/Resources/public/bower_components/bootstrap/dist/js/bootstrap.js'
+		'@SiteBlogBundle/Resources/public/js/main.js'
+		output="js/compiled/bulid.js"
+
+	%}
+	    <script type="text/javascript" src="{{ asset_url }}"></script>
+	{% endjavascripts %}
+{% endblock %}
